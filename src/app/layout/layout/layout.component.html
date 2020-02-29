@@ -2,7 +2,8 @@
 <div class="toolbar" role="banner">
 
   <div class="skip-to-main">
-    <a routerLink="/home" fragment="main-section">Skip</a>
+    <!-- <a [routerLink]="link" fragment="main-section">Skip</a> -->
+    <a name="main-section" [routerLink]="link" fragment="main-section">skip</a>
   </div>
   <img
     width="40"
@@ -39,7 +40,8 @@
 </div>
 
 <main>
-  <p id="main-section" class="main">Main section</p>
+  <p>Main section</p>
+  <a #main id="main-section" href="" >main section</a>
   <router-outlet></router-outlet>
 </main>
 
