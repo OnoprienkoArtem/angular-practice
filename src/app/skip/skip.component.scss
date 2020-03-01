@@ -1,12 +1,15 @@
 
 .example-focus-monitor {
-  // padding: 10px;
-  background-color: blue;
+ position: absolute;
+ top: 0;
+ left: -500px;
+ 
 }
 
 
 
 .cdk-keyboard-focused {
+  left: 0;
   background: rgba(0, 255, 0, 0.5) !important ;
 }
 

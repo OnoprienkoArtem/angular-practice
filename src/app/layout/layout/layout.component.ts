@@ -1,42 +1,21 @@
-// import { Component, OnInit, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
-import {
-  OnInit,
-  AfterViewInit,
-  ChangeDetectorRef,
-  Component,
-  ElementRef,
-  NgZone,
-  OnDestroy,
-  ViewChild
-} from '@angular/core';
-
+import { Component, OnInit, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
-// import { FocusMonitor, FocusOrigin } from '@angular/cdk/a11y';
-
-
 
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss']
 })
-export class LayoutComponent implements OnInit, AfterViewInit, OnDestroy {
+export class LayoutComponent implements OnInit, AfterViewInit {
 
-  link: string;
-
-  // @ViewChild('monitored', { static: false }) monitoredEl: ElementRef<HTMLElement>;
+  // link: string;
 
   @ViewChild('main', { static: false }) main: ElementRef;
 
   constructor(
     private router: Router,
-    private route: ActivatedRoute,
-    // public focusMonitor: FocusMonitor,
-    // private cdr: ChangeDetectorRef,
-    // private ngZone: NgZone
-  ) {
-
-  }
+    private route: ActivatedRoute
+  ) { }
 
 
   ngOnInit() {
@@ -49,10 +28,6 @@ export class LayoutComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngAfterViewInit() {
 
-    // this.focusMonitor.monitor(this.monitoredEl)
-    //   .subscribe(origin => this.ngZone.run(() => {
-    //     this.cdr.markForCheck();
-    //   }));
 
     // this.router.events.subscribe(
     //   (event: any) => {
@@ -66,7 +41,6 @@ export class LayoutComponent implements OnInit, AfterViewInit, OnDestroy {
     // this.route.fragment.subscribe(
     //   (fragments) => {
     //     console.log('fragments', fragments);
-
     //     if (fragments === 'main-section') {
     //       console.log('fragments', fragments);
     //       this.main.nativeElement.focus();
@@ -76,10 +50,6 @@ export class LayoutComponent implements OnInit, AfterViewInit, OnDestroy {
 
   }
 
-  ngOnDestroy() {
-    // this.focusMonitor.stopMonitoring(this.monitoredEl);
-  }
 
-  
 
 }

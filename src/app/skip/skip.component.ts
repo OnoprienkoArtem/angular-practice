@@ -30,8 +30,6 @@ export class SkipComponent implements OnInit, AfterViewInit, OnDestroy {
     private ngZone: NgZone
   ) { }
 
-  
-
   @Output() valueChange = new EventEmitter();
 
   skipCanges() {
@@ -43,8 +41,8 @@ export class SkipComponent implements OnInit, AfterViewInit, OnDestroy {
 
 
   ngAfterViewInit() {
-     this.focusMonitor.monitor(this.monitoredEl)
-      .subscribe(origin => this.ngZone.run(() => {
+    this.focusMonitor.monitor(this.monitoredEl)
+      .subscribe(() => this.ngZone.run(() => {
         this.cdr.markForCheck();
       }));
   }
