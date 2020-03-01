@@ -10,6 +10,7 @@ import { LayoutModule } from './layout/layout.module';
 import { MainComponent } from './main/main.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

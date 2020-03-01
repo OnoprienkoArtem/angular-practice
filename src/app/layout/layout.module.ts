@@ -7,6 +7,7 @@ import { HomePageComponent } from '../home-page/home-page.component';
 import { AboutPageComponent } from '../about-page/about-page.component';
 import { LayoutComponent } from './layout/layout.component';
 
+
 @NgModule({
   declarations: [LayoutComponent],
   imports: [

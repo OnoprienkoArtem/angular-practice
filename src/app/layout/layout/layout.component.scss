@@ -11,8 +11,12 @@
 }
 
 .skip-to-main {
+  margin-left: 10px;
   a {
     color: red;
+  }
+  button {
+    cursor: pointer;
   }
 }
 
