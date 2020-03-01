@@ -4,9 +4,11 @@
   <div class="skip-to-main">
     <!-- <a [routerLink]="link" fragment="main-section">Skip</a> -->
     <!-- <a [routerLink]="link" (click)="skip()">Skip</a> -->
-    <button (click)="skip()">skip</button>
+    <!-- <button (click)="skip()">skip</button> -->
     <!-- <a href="#main-section">skip</a> -->
-    
+    <app-skip (valueChange)="skip()"></app-skip>
+
+    <!-- <button #monitored (click)="skip()">1. Focus Monitored Element</button> -->
   </div>
   <img
     width="40"

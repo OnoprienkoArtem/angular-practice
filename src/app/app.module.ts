@@ -9,6 +9,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { LayoutModule } from './layout/layout.module';
 import { MainComponent } from './main/main.component';
 import { AboutPageComponent } from './about-page/about-page.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { AboutPageComponent } from './about-page/about-page.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LayoutModule
+    LayoutModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

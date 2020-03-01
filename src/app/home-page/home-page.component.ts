@@ -18,7 +18,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
 
   }
 
-  // ngAfterViewInit(): void {
+  ngAfterViewInit(): void {
   //   console.log(this.main);
   //   this.route.fragment.subscribe(
   //     (fragments) => {
@@ -31,6 +31,6 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   //     }
   //   );
 
-  // }
+  }
 
 }

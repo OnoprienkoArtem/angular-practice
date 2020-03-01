@@ -1,22 +1,42 @@
-import { Component, OnInit, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+// import { Component, OnInit, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import {
+  OnInit,
+  AfterViewInit,
+  ChangeDetectorRef,
+  Component,
+  ElementRef,
+  NgZone,
+  OnDestroy,
+  ViewChild
+} from '@angular/core';
+
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
+// import { FocusMonitor, FocusOrigin } from '@angular/cdk/a11y';
+
+
 
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss']
 })
-export class LayoutComponent implements OnInit, AfterViewInit {
+export class LayoutComponent implements OnInit, AfterViewInit, OnDestroy {
 
   link: string;
 
-  constructor(private router: Router, private route: ActivatedRoute) {
-
-  
-   }
+  // @ViewChild('monitored', { static: false }) monitoredEl: ElementRef<HTMLElement>;
 
   @ViewChild('main', { static: false }) main: ElementRef;
 
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    // public focusMonitor: FocusMonitor,
+    // private cdr: ChangeDetectorRef,
+    // private ngZone: NgZone
+  ) {
+
+  }
 
 
   ngOnInit() {
@@ -27,7 +47,12 @@ export class LayoutComponent implements OnInit, AfterViewInit {
   }
 
 
-  ngAfterViewInit(): void {
+  ngAfterViewInit() {
+
+    // this.focusMonitor.monitor(this.monitoredEl)
+    //   .subscribe(origin => this.ngZone.run(() => {
+    //     this.cdr.markForCheck();
+    //   }));
 
     // this.router.events.subscribe(
     //   (event: any) => {
@@ -50,5 +75,11 @@ export class LayoutComponent implements OnInit, AfterViewInit {
     // );
 
   }
+
+  ngOnDestroy() {
+    // this.focusMonitor.stopMonitoring(this.monitoredEl);
+  }
+
+  
 
 }
